@@ -1,0 +1,56 @@
+select CASE round(dbms_random.value(1,10)) 
+            WHEN 1 THEN 'GP Gabriel Pereira' 
+            WHEN 2 THEN 'MS Mousinho da Silveira' 
+            WHEN 3 THEN 'Aukamm Elementary School. Wiesbaden, Germany'
+            WHEN 4 THEN 'Mason-Rice Elementary. Newton Centre, Massachusetts'
+            WHEN 5 THEN 'Little Harbor Elementary School'
+            WHEN 6 THEN 'Bay Head Elementary'
+            WHEN 7 THEN 'Frost Elementary'
+            WHEN 8 THEN 'Marion Cross School'
+            WHEN 9 THEN 'Merion Elementary School'
+            WHEN 10 THEN 'Marais des Cygnes Valley Elementary'
+       END AS school,
+       CASE round(dbms_random.value(1,2)) 
+            WHEN 1 THEN 'Male' 
+            WHEN 2 THEN 'Female' 
+       END AS sex,
+       round(dbms_random.value(15,22)) age,
+       CASE round(dbms_random.value(1,2)) 
+            WHEN 1 THEN 'Urban' 
+            WHEN 2 THEN 'Rural' 
+       END AS adress,
+       CASE round(dbms_random.value(1,2)) 
+            WHEN 1 THEN 'LE3' 
+            WHEN 2 THEN 'GT3' 
+       END AS famsize,
+       CASE round(dbms_random.value(1,2)) 
+            WHEN 1 THEN 'T' 
+            WHEN 2 THEN 'A' 
+       END AS pstatus,
+       CASE round(dbms_random.value(1,4)) 
+            WHEN 1 THEN '1' 
+            WHEN 2 THEN '2' 
+            WHEN 3 THEN '3'
+            WHEN 4 THEN '4'    
+       END AS medu,
+       CASE round(dbms_random.value(1,4)) 
+            WHEN 1 THEN '1' 
+            WHEN 2 THEN '2' 
+            WHEN 3 THEN '3'
+            WHEN 4 THEN '4'    
+       END AS fedu,
+       CASE round(dbms_random.value(1,5)) 
+            WHEN 1 THEN 'teacher' 
+            WHEN 2 THEN 'health' 
+            WHEN 3 THEN 'services'
+            WHEN 4 THEN 'at_home'    
+            WHEN 5 THEN 'other'  
+       END AS mjob,
+       CASE round(dbms_random.value(1,5)) 
+            WHEN 1 THEN 'teacher' 
+            WHEN 2 THEN 'health' 
+            WHEN 3 THEN 'services'
+            WHEN 4 THEN 'at_home'    
+            WHEN 5 THEN 'other'  
+       END AS fjob
+FROM person where rownum <= 1000
