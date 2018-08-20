@@ -12,4 +12,4 @@ database has been connected.
 
 Fixed the overfitting issue.
 The visualization tool, DASH by Plotly, was added.
-The accuracy was reduced to 0.97
+The accuracy was reduced to 0.75
